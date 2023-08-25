@@ -1,1 +1,8 @@
-<p>{{ "Server" }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<!-- dinamically styling, using propery binding -->
+
+<div class="container">
+  <span>Server Component</span>
+  <p [ngStyle]="{ backgroundColor: getColor() }">
+    {{ "Server" }} with ID {{ serverId }} is {{ getServerStatus() }}
+  </p>
+</div>

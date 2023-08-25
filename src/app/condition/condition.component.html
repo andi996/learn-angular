@@ -1,0 +1,26 @@
+<div class="container">
+  <p>Conditional Component (If Else)</p>
+
+  <label for="server-name" class="label">Server Name</label>
+  <input
+    type="text"
+    id="server-name"
+    class="form-control mt-2"
+    [(ngModel)]="serverName"
+  />
+  <button
+    class="btn btn-primary mt-2 mb-2"
+    [disabled]="!serverName"
+    (click)="onCreateServer()"
+  >
+    Add Server
+  </button>
+  
+  <!-- USING IF ELSE -->
+  <p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
+  <ng-template #noServer>
+    <p>No server was created!</p>
+  </ng-template>
+  <!-- ============== -->
+
+</div>

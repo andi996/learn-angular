@@ -1,7 +1,4 @@
-h1 {
-  color: darkblue;
-}
-
 .container {
   padding: 20px;
+  border: 1px solid black;
 }
