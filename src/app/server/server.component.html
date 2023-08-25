@@ -1,8 +1,13 @@
-<!-- dinamically styling, using propery binding -->
+<!-- [ngStyle] is to dinamically styling, using propery binding -->
+<!-- [ngClass] is to dinamically css class. value is javascript object (key:value).
+the keys are css className, and the value are the conditions determining whether this class should be attached or not. -->
 
 <div class="container">
   <span>Server Component</span>
-  <p [ngStyle]="{ backgroundColor: getColor() }">
+  <p
+    [ngStyle]="{ backgroundColor: getColor() }"
+    [ngClass]="{ online: serverStatus === 'online' }"
+  >
     {{ "Server" }} with ID {{ serverId }} is {{ getServerStatus() }}
   </p>
 </div>

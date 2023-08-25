@@ -1,0 +1,17 @@
+<div class="container">
+  <p>assignment3 works!</p>
+  <button class="btn btn-primary" (click)="onClickDisplay()">
+    Display Details
+  </button>
+  <p *ngIf="showSecret">Secret Password = tuna</p>
+
+  <!-- show mapped data, and extract the index -->
+  <!-- change the background and text color with css, if the log is more than 5 -->
+  <p
+    *ngFor="let log of logClicked; let i = index"
+    [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'white' }"
+    [ngClass]="{ 'white-text': i >= 4 }"
+  >
+    {{ log }}
+  </p>
+</div>
