@@ -1,0 +1,36 @@
+<!-- // data binding (get data)
+<span>Using string interpollation:
+  <p>{{ allowNewServer }}</p>
+</span>
+<span>Using property binding:
+    <p [innerText]="allowNewServer"></p>
+</span> -->
+<!-- ====================== -->
+
+
+<!-- one way data-binding -->
+<!-- <hr>
+<label for="server-name" class="label">Server Name</label>
+<input type="text" id="server-name" class="form-control mt-2" (input)="onUpdateServerName($event)">
+<button class="btn btn-primary mt-2 mb-2" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> -->
+<!-- ===================== -->
+
+
+<hr>
+<!-- TWO WAY DATA BINDING -->
+<label for="server-name" class="label">Server Name</label>
+<input type="text" id="server-name" class="form-control mt-2" [(ngModel)]="serverName">
+<button class="btn btn-primary mt-2 mb-2" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- <p>{{ serverName }}</p> -->
+<hr>
+<!-- TWO WAY DATA BINDING EXERCISE -->
+<label for="username" class="label">Username</label>
+<input type="text" id="username" class="form-control mt-2" [(ngModel)]="username">
+<button class="btn btn-primary mt-2 mb-2" [disabled]="!username" (click)="username =''">Reset Username</button>
+<p>{{ username }}</p>
+<hr>
+<!-- ==================== -->
+
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
