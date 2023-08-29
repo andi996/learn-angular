@@ -9,6 +9,9 @@ import { WarningAlertComponent } from './alerts/warning/warning.component';
 import { SuccessAlertComponent } from './alerts/success/success.component';
 import { ConditionComponent } from './condition/condition.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './odd/odd.component';
+import { EvenComponent } from './even/even.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { Assignment3Component } from './assignment3/assignment3.component';
     SuccessAlertComponent,
     ConditionComponent,
     Assignment3Component,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
